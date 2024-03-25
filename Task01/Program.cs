@@ -25,7 +25,8 @@ a = 9, b = -3 => да
 a = -3, b = 9 => нет
 */
 
-/*Console.WriteLine("Введите два числа: ");
+/*
+Console.WriteLine("Введите два числа: ");
 int number1 = Convert.ToInt32(Console.ReadLine());
 int number2 = Convert.ToInt32(Console.ReadLine());
 
@@ -86,5 +87,38 @@ if (number > 7)
 */
 
 /*
-
+Напишите программу, которая на вход принимает целое число N, 
+а на выходе показывает все целые числа в промежутке от -N до N.
+4 => -4, -3, -2, -1, 0, 1, 2, 3, 4
+2 => -2, -1, 0, 1, 2
 */
+/*
+Console.WriteLine("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+
+for (int i = -number; i <= number; i++)
+{
+Console.Write(i+" " );
+}
+*/
+
+/*
+Напишите программу, которая принимает на вход
+трёхзначное число и на выходе показывает последнюю цифру этого числа
+ 
+456 => 10
+782 => 9
+918 => 17
+*/
+
+using System.Globalization;
+
+Console.WriteLine("Введите техзначное число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+if(number > 99 && number < 1000)
+{
+    Console.WriteLine(number%10);
+}
+else
+Console.WriteLine("число не трехзначное");
