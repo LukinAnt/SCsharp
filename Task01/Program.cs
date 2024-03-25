@@ -112,7 +112,6 @@ Console.Write(i+" " );
 918 => 17
 */
 
-using System.Globalization;
 
 Console.WriteLine("Введите техзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
