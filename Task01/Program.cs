@@ -210,3 +210,126 @@ for (int i = 2; i <= number; i+=2)
 Console.Write($"{i} ");
 }
 */
+
+// семинар 2
+
+/*
+9. Напишите программу, которая выводит случайное число из отрезка [10, 99] 
+и показывает наибольшую цифру числа.
+78 -> 8
+12-> 2
+85 -> 8
+*/
+/*
+int number = new Random().Next(10, 100);
+Console.WriteLine(number);
+int number1 = number / 10;
+int number2 = number % 10;
+int max = number1;
+if(number2 > number1)
+{
+    max = number2;
+}
+    Console.WriteLine(max);
+
+
+//мой вар ниже без max
+
+if (number1  > number2)
+{
+    Console.WriteLine(number1);
+}
+else
+{
+    Console.WriteLine(number2);
+}
+*/
+
+/*
+11. Напишите программу, которая выводит случайное трёхзначное число и 
+удаляет вторую цифру этого числа.
+456 -> 46
+782 -> 72
+918 -> 98
+*/
+/*
+int number = new Random().Next(100, 1000);
+Console.WriteLine(number);
+int number1 = number / 100;
+int number2 = number % 10;
+Console.WriteLine(number1 * 10 + number2);
+
+// а если сложить первое и третье то 
+Console.WriteLine(number1 + number2);
+*/
+
+/*
+12.Напишите программу, которая будет принимать на вход два числа 
+и выводить, является ли второе число кратным первому.
+Если второе число некратно первому, то программа выводит остаток от деления.
+34, 5 -> некратно, остаток 4
+16, 4 -> кратно
+*/
+/*
+Console.WriteLine("Введите число: ");
+int number1 = Convert.ToInt32(Console.ReadLine());
+int number2 = Convert.ToInt32(Console.ReadLine());
+int ostatok = number1 % number2;
+
+if(ostatok == 0)
+// или if(number1 % number2 ==0) и в выводе также 
+{
+    Console.WriteLine("Кратно");
+}
+else
+{
+    Console.WriteLine(("некратно" + ostatok));
+}
+*/
+
+/*
+14.
+14. Напишите программу, которая принимает на вход число и проверяет, 
+кратно ли оно одновременно 7 и 23.
+14 -> нет
+46 -> нет
+161 -> да
+*/
+/*
+Console.WriteLine("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+if(number % 7 ==0 && number % 23 == 0)
+{
+        Console.WriteLine("да");
+}
+else
+{
+        Console.WriteLine("нет");
+}
+*/
+
+
+/*
+16.Напишите программу, которая принимает на вход два числа и проверяет,
+является ли одно число квадратом другого.
+5, 25 -> да
+-4, 16 -> да
+25, 5 -> да
+8,9 -> нет
+*/
+/*
+Console.WriteLine("Введите два числа: ");
+int number1 = Convert.ToInt32(Console.ReadLine());
+int number2 = Convert.ToInt32(Console.ReadLine());
+    //int kv = Math.Pow (number1, 2)
+    // сначала число которое возводим а потом на сколько возводми
+
+    if (Math.Pow(number1, 2) == number2 || Math.Pow(number2, 2) == number1)
+{Console.WriteLine("yes");}
+else{Console.WriteLine(("no"));}
+*/
+
+/*
+
+*/
+
