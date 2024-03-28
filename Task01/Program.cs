@@ -330,6 +330,51 @@ else{Console.WriteLine(("no"));}
 */
 
 /*
-
+Задача 4: Напишите программу, которая на вход принимает 
+натуральное число N, а на выходе показывает его цифры через запятую.
+*/
+/*
+Console.WriteLine("Введите натур число: N ");
+int N = Convert.ToInt32(Console.ReadLine());
+if (N < 10)
+{
+    Console.WriteLine("N");
+}
+else
+{
+while (N > 0)
+{
+int currentDigit = N % 10;
+N /= 10;
+if (N > 0)
+{
+Console.Write(currentDigit + ",");
+}
+else
+{
+Console.WriteLine(currentDigit);
+}
+}
+}
 */
 
+/*
+Задача 2: Напишите программу, которая принимает на вход координаты 
+точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт номер координатной четверти 
+плоскости, в которой находится эта точка.
+
+Console.Write("Введите координаты точки X и Y через пробел:");
+string[] coordinates = Console.ReadLine().Split(' ');
+int x = Convert.ToInt32(coordinates[0]);
+int y = Convert.ToInt32(coordinates[1]);
+if (x > 0 && y > 0)
+Console.WriteLine("1");
+else if (x < 0 && y > 0)
+Console.WriteLine("2");
+else if (x < 0 && y < 0)
+Console.WriteLine("3");
+else if (x > 0 && y < 0)
+Console.WriteLine("4");
+else
+Console.WriteLine("Точка находится на оси координат");
+*/
