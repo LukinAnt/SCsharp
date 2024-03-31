@@ -493,4 +493,90 @@ Console.Write($" {arr3[i]} ");
 n = n/10;
 }
 */
+/*
+Задайте одномерный массив из 10 целых чисел от 1 до 100.
+ Найдите количество элементов массива, значения которых 
+ лежат в отрезке [10,90].
+int[] array = {1, 5, 10, 20, 30, 40, 99, 4, 90, 3}; 
+// Создание массива
+*/
+
+// АВТОТЕСТ
+/*
+int[] arr = new int[10];
+int count = 0;
+
+for (int i = 0; i < arr.Length ; i++)
+{
+    arr[i] = new Random().Next (1, 101);
+    Console.Write($"{arr[i]} ");
+    if (arr[i] >= 10 && arr[i] <= 90)
+        {count = count + 1;}
+}
+System.Console.WriteLine();
+System.Console.WriteLine(count);
+*/
+/*
+Задайте массив на 10 целых чисел. Напишите программу, которая определяет 
+количество чётных чисел в массиве.
+
+int[] array = {2, 5, 2, 3, 6, 3, 7, 8, 2, 4}; // Создание массива
+
+int[] arr = new int[10];
+int count = 0;
+for (int i = 2; i < arr.Length; i = +2)
+
+{
+Console.Write("{i} ");
+}
+*/
+/*
+int[] arr = new int[10];
+int x = 0;
+for (int i = 0; i < arr.Length; i++)
+{
+    arr[i] = new Random().Next (0, 11);
+    Console.Write($"{arr[i]} ");
+}
+System.Console.WriteLine();
+for (int i = 1; i < arr.Length; i++)
+{
+    if(arr[i] % 2 == 0)
+    i = i++;
+}
+Console.WriteLine($" {arr[x]} ");
+Console.WriteLine(arr[x]);
+*/
+
+/*Задайте массив из вещественных чисел с ненулевой дробной частью.
+//Найдите разницу между максимальным и минимальным элементов массива.
+*/
+/*
+Console.Write("Введите массив: ");
+int n = Convert.ToInt32(Console.ReadLine());
+double max=0;
+double a;
+double[] array= new double [n];
+for (int i=0; i<array.Length;i++)
+array [i]=new Random().NextDouble() *100;
+double min = array[0];
+for (int i=0; i<array.Length;i++)
+{
+if (max<array[i])
+max=array[i];
+}
+Console.Write(max);
+for (int i=0; i<array.Length;i++)
+{
+if (min>array[i])
+min=array[i];
+}
+a=max-min;
+Console.Write("  и  "+min);
+Console.WriteLine("\n");
+Console.WriteLine("разница: ");
+Console.WriteLine(a);
+*/
+
+//сем4
 
