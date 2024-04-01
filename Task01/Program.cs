@@ -580,3 +580,257 @@ Console.WriteLine(a);
 
 //сем4
 
+/*
+Задайте одномерный массив, заполненный случайными целыми
+числами. Определите количество четных чисел в этом
+массиве.
+*/
+/*
+void FillArray(int start, int end, int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = new Random().Next (start, end);
+    }
+}
+void PrintArray(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        System.Console.Write($"{arr[i]} ");
+    }
+}
+
+int countEven (int[] arr)
+{
+    int result = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] % 2 == 0)
+        {result++;}
+    }
+    return result;
+}
+int [] user_arr = new int [10];
+FillArray(1, 100, user_arr);
+PrintArray (user_arr);
+System.Console.WriteLine();
+System.Console.WriteLine (countEven (user_arr));
+// если возвести в квадрат
+int count = countEven (user_arr);
+System.Console.WriteLine (count);
+*/
+
+
+
+/* Задайте массив из N случайных целых чисел (N вводится с
+клавиатуры).
+Найдите количество чисел, которые делятся нацело на 7 */
+
+
+/* void FillArray (int[] arr)
+{
+    System.Console.WriteLine("заполните массив:");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = Convert.ToInt32(Console.ReadLine());
+    }
+}
+System.Console.WriteLine("Введите размер массива:");
+int size = Convert.ToInt32(Console.ReadLine());
+int [] user_arr = new int [size];
+FillArray(user_arr);
+
+int countEven (int[] arr)
+{
+    int result = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] % 7 == 0)
+        {result++;}
+    }
+    return result;
+}
+// КРАСИВЫЙ
+void printArray(int[] arrayToPrint)
+{
+Console.Write("[");
+for (int i = 0; i < arrayToPrint.Length; i++)
+{
+Console.Write(arrayToPrint[i]);
+if (i != arrayToPrint.Length - 1)
+{
+Console.Write(", ");
+}
+}
+Console.Write("]");
+Console.WriteLine();
+}
+printArray(user_arr);
+System.Console.WriteLine(countEven(user_arr)); */
+
+/* Заполните массив на N (вводится с консоли, не более 8)
+случайных целых чисел от 0 до 9.
+Сформируйте целое число, которое будет состоять из цифр из
+массива. Старший разряд числа находится на 0-м индексе,
+младший – на последнем.
+Пример
+[1 3 2 4 2 3] => 132423
+[2 3 1] => 231 */
+
+/* int[] FillArray (int saiz)
+{
+    System.Console.WriteLine("заполните массив:");
+    int[] arr = new int [saiz];
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    return arr;
+}
+
+void PrintArray(int[] arrayToPrint)
+{
+Console.Write("[");
+for (int i = 0; i < arrayToPrint.Length; i++)
+{
+Console.Write(arrayToPrint[i]);
+if (i != arrayToPrint.Length - 1)
+{
+Console.Write(", ");
+}
+}
+Console.Write("]");
+Console.WriteLine();
+}
+// ne ponyl propusk
+int[] user_arr = FillArray(8);
+PrintArray(user_arr);
+
+int GetNumber (int[] arr)
+{
+int result = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        result = result * 10 + arr [i];
+    }
+    return result;
+}
+System.Console.WriteLine(GetNumber(user_arr)); */
+
+//DZ---------------------------------
+
+/*
+Задача 2: Задайте массив заполненный случайными
+трёхзначными числами. Напишите программу,
+которая покажет количество чётных чисел в
+массиве. */
+
+/* Console.WriteLine("Введите размер массива");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] numbers = new int[size];
+FillArrayRandomNumbers(numbers);
+PrintArray(numbers);
+int count = 0;
+
+for (int z = 0; z < numbers.Length; z++)
+if (numbers[z] % 2 == 0)
+count++;
+
+Console.WriteLine($"{count} чётныx");
+
+void FillArrayRandomNumbers(int[] numbers)
+{
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        numbers[i] = new Random().Next(100,1000);
+    }
+}
+void PrintArray(int[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write(numbers[i] + " ");
+    }
+    Console.Write("]");
+    Console.WriteLine();
+}
+
+ */
+
+/* Задача 3: Напишите программу, которая перевернёт
+одномерный массив (первый элемент станет
+последним, второй – предпоследним и т.д.) */
+
+/* int[] GetArray (int size, int minValue, int maxValue)
+{
+    int[] resultArray = new int [size];
+    for (int i = 0; i < size; i++) // i < size = i < resultArray.Length
+    {
+        resultArray[i] = new Random().Next(minValue, maxValue);
+    }
+    return resultArray;
+}
+
+Console.Write("Введите количество элементов массива: ");
+int sizeElement = Convert.ToInt32(Console.ReadLine());
+int[] array = GetArray (sizeElement, 0, 100);
+Console.WriteLine($"Исходный Массив: [ {String.Join("; ", array)} ]");
+
+void ReverseArray(int[] arr)
+{
+for (int i = 0, j = arr.Length - 1; i < arr.Length / 2; i++, j--)
+{
+    int temp = arr[i]; 
+    arr[i] = arr[j]; 
+    arr[j] = temp; 
+}
+}
+ReverseArray(array);
+Console.WriteLine($"Обратный Массив: [ {String.Join("; ", array)} ]");
+ */
+
+
+
+
+
+
+
+/* Задача 1: Напишите программу, которая бесконечно
+запрашивает целые числа с консоли. Программа
+завершается при вводе символа ‘q’ или при вводе
+числа, сумма цифр которого четная. несправился и списал */
+
+/* while (true) 
+{
+Console.Write("Введите число или 'q' для выхода: ");
+string input = Console.ReadLine(); 
+if (input == "q") 
+{
+break;
+}
+
+int number;
+if (int.TryParse(input, out number)){
+int sum = 0;
+while (number > 0) 
+{
+sum = sum + number % 10; 
+number = number / 10; 
+}
+
+if (sum % 2 == 0) 
+{
+Console.WriteLine("[STOP]");
+
+break;
+}
+}
+else 
+{
+Console.WriteLine("Некорректный ввод. Пожалуйста, введите целое числоили 'q'.");
+}
+} */
+
+
